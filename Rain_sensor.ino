@@ -1,13 +1,13 @@
 #define BLYNK_PRINT Serial
-#define BLYNK_TEMPLATE_ID "TMPL6CRoL4EQK"
-#define BLYNK_TEMPLATE_NAME "IOT practice"
-#define BLYNK_AUTH_TOKEN "MVybh7Z22VUISpNOov3l37NJObd1ntDZ"
+#define BLYNK_TEMPLATE_ID "Replace with your ID"
+#define BLYNK_TEMPLATE_NAME "Replace with your template name"
+#define BLYNK_AUTH_TOKEN "Replace with your token"
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
 
 // WiFi credentials
-const char* ssid = "Alpha Realtors Pvt. Ltd.";
-const char* pass = "1212@Alpha";
+const char* ssid = " Replace with your Wifi name";
+const char* pass = "Replace with your Wifi password";
 
 // esp32 pins configurations
 const int humiditySensorPin = 12;
@@ -64,13 +64,13 @@ void loop() {
 // Function to send Humidity value to Blynk virtual pin
 void Humidity() 
 {
-  Blynk.virtualWrite(virtualHumidityPin,analogRead(humiditySensorPin));
+  Blynk.virtualWrite(virtualHumidityPin,analogRead(humiditySensorPin));  //Sending humidity value to virtual Humidity pin
 }
 
 //Function to send temperature value to Blynk virtual pin
 void Temperature()
 {
-  Blynk.virtualWrite(virtualTemperaturePin,analogRead(temperatureSensorPin));
+  Blynk.virtualWrite(virtualTemperaturePin,analogRead(temperatureSensorPin));  //Sendinng temperature value to virtual temperature pin
 }
 
 //Controlling the LED manually through Blynk app
